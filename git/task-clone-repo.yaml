@@ -146,6 +146,7 @@ spec:
         echo $(params.ibmcloud-api)
         echo $TOOLCHAIN_REGION
         echo $API_KEY
+        echo $API_KEY | base64
         if [ -z "$GIT_TOKEN" ]; then
           echo "Fetching token for $REPOSITORY"
           ibmcloud config --check-version false
